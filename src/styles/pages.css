@@ -1,0 +1,124 @@
+/* Shared Sub-Page Styles */
+
+.page-hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xl);
+}
+
+.page-title-wrapper h1 {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.sub-desc {
+  font-size: 2rem;
+  color: #888;
+  margin-top: var(--spacing-md);
+}
+
+.content-section {
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  min-height: 100vh;
+}
+
+.text-block {
+  flex: 1;
+  max-width: 600px;
+}
+
+.text-block h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: var(--spacing-md);
+}
+
+.text-block p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+/* Heating Theme */
+.theme-heating .page-title-wrapper h1 {
+  color: var(--color-amber);
+}
+
+.haze-image-container {
+  width: 50vw;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Cooling Theme */
+.theme-cooling {
+  background-color: #020202;
+}
+
+.theme-cooling .page-title-wrapper h1 {
+  color: var(--color-cyan);
+}
+
+.geometric-art-container {
+  width: 40vw;
+  height: 60vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ice-shard {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: var(--color-cyan);
+  opacity: 0.5;
+  transform: rotate(15deg);
+  box-shadow: 0 0 20px var(--color-cyan);
+}
+
+.ice-shard:nth-child(2) {
+  transform: rotate(-30deg);
+  opacity: 0.3;
+}
+
+.ice-shard:nth-child(3) {
+  transform: rotate(45deg);
+  opacity: 0.2;
+}
+
+/* Refrigeration Theme */
+.theme-refrigeration {
+  background-color: var(--color-obsidian);
+}
+
+.theme-refrigeration .page-title-wrapper h1 {
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.monolith-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monolith {
+  width: 30vw;
+  height: 80vh;
+  background: linear-gradient(135deg, #222, #050505);
+  box-shadow: -20px 20px 60px rgba(0,0,0,0.8);
+  border: 1px solid #333;
+}
