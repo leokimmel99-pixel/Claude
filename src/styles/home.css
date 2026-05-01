@@ -1,0 +1,63 @@
+/* Hero Narrative Section */
+#hero-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#hero-narrative {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+}
+
+.hero-phase {
+  position: absolute;
+  opacity: 0; /* Hide all phases by default, let GSAP control */
+  left: var(--spacing-md);
+  width: 100%;
+  max-width: 800px;
+}
+
+.hero-phase h1 {
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.phase-desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #888;
+  margin-top: var(--spacing-md);
+}
+
+.stagger-text {
+  /* Initial state set by GSAP */
+}
+
+/* Ensure the scroll progress indicator sits above canvas */
+#scroll-progress {
+  z-index: 50;
+}

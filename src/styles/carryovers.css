@@ -1,0 +1,68 @@
+/* Styles for Carryover Narratives */
+
+.carryover-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carryover-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Refrigeration Story Text */
+#refrigeration-story .story-text-container {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  padding: var(--spacing-lg);
+}
+
+#refrigeration-story h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--color-cyan);
+  margin-bottom: 1rem;
+}
+
+#refrigeration-story p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+  /* Glow effect */
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* HVAC Story Text */
+#hvac-story {
+  justify-content: flex-end;
+}
+
+#hvac-story .hvac-text-mask {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  padding: var(--spacing-lg);
+  /* The clipping mask is controlled by GSAP to simulate blowing dust revealing text */
+}
+
+#hvac-story h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: var(--color-amber);
+  margin-bottom: 1rem;
+}
+
+#hvac-story p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}

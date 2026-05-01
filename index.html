@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richie | Climate Mastery</title>
+  </head>
+  <body data-barba="wrapper">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-track">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+
+    <!-- Thermostat Progress -->
+    <div id="scroll-progress">
+      <div id="scroll-progress-fill"></div>
+    </div>
+
+    <!-- Global Navigation -->
+    <header class="site-header">
+      <div class="logo"><a href="/">Richie</a></div>
+      <div class="menu-toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+
+    <div class="fullscreen-menu">
+      <ul class="menu-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/heating.html">Heating</a></li>
+        <li><a href="/cooling.html">Cooling</a></li>
+        <li><a href="/refrigeration.html">Refrigeration</a></li>
+      </ul>
+    </div>
+
+    <!-- Page Content Container -->
+    <main data-barba="container" data-barba-namespace="home">
+      <!-- Background Canvas for Hero Story -->
+      <canvas id="hero-canvas"></canvas>
+
+      <!-- Pinned Hero Narrative Section -->
+      <section class="hero-section" id="hero-narrative">
+        <div class="hero-content">
+          <!-- Phase 1 -->
+          <div class="hero-phase" id="phase-1">
+            <h1 class="stagger-text">The Environment</h1>
+            <h1 class="stagger-text">Is Stagnant.</h1>
+            <p class="stagger-text phase-desc">Air flow restricted. Temperature imbalanced.</p>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="hero-phase" id="phase-2">
+            <h1 class="stagger-text">The Invisible</h1>
+            <h1 class="stagger-text">Intervention.</h1>
+            <p class="stagger-text phase-desc">Precision mechanics locked into place.</p>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="hero-phase" id="phase-3">
+            <h1 class="stagger-text">Equilibrium</h1>
+            <h1 class="stagger-text">Restored.</h1>
+            <p class="stagger-text phase-desc">Breath returns to the architecture.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Refrigeration Narrative -->
+      <section class="carryover-section" id="refrigeration-story">
+        <div class="story-text-container">
+          <h2>Absolute Preservation</h2>
+          <p>Sub-zero stability.</p>
+          <p>Uncompromising environments.</p>
+          <p>Preserved flawlessly.</p>
+        </div>
+      </section>
+
+      <!-- HVAC Narrative -->
+      <section class="carryover-section" id="hvac-story">
+        <div class="hvac-text-mask">
+          <h2>The Awakening</h2>
+          <p>Stagnant air purged.</p>
+          <p>A new atmosphere forged instantly.</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

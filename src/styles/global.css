@@ -1,0 +1,158 @@
+@import './vars.css';
+
+/* Pre-loader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.preloader-track {
+  width: 2px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--color-white);
+}
+
+/* Global Nav */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle .line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+/* Fullscreen Menu (Condensation Reveal) */
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(20px);
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  /* Digital blast of air mask */
+  clip-path: circle(0% at 100% 0%);
+}
+
+.fullscreen-menu.is-active {
+  pointer-events: auto;
+}
+
+.menu-links {
+  text-align: center;
+}
+
+.menu-links li {
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+}
+
+.menu-links a {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+#custom-cursor.is-hovering {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+/* Thermostat Scroll Progress */
+#scroll-progress {
+  position: fixed;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 50;
+  border-radius: 2px;
+}
+
+#scroll-progress-fill {
+  width: 100%;
+  height: 0%;
+  background: var(--color-amber); /* Starts warm */
+  border-radius: 2px;
+}
