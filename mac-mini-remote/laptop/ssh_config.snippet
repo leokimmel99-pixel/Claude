@@ -1,7 +1,8 @@
 # Append to ~/.ssh/config on the LAPTOP. "mac-mini" resolves via Tailscale MagicDNS.
 Host mac-mini
   HostName mac-mini
-  User leo24          # macOS short name; check with `whoami` on the mini
+  # macOS short name of the Mac mini account; confirm with `whoami` on the mini
+  User leo24
   IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
   ServerAliveInterval 15
