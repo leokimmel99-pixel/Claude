@@ -1,0 +1,15 @@
+#!/bin/bash
+# cc [project-dir]  — attach to (or create) the single persistent Claude session for a project.
+set -eu
+dir="$(cd "${1:-$PWD}" && pwd)"
+name="cc-$(basename "$dir" | tr -c 'A-Za-z0-9_-' '_')"
+name="${name%_}"
+# Claude's OAuth token lives in the login keychain, which is locked in SSH sessions.
+security show-keychain-info ~/Library/Keychains/login.keychain-db >/dev/null 2>&1 \
+  || security unlock-keychain ~/Library/Keychains/login.keychain-db
+if ! tmux has-session -t "$name" 2>/dev/null; then
+  tmux new-session -d -s "$name" -c "$dir" -n claude
+  tmux send-keys -t "$name:claude" "export CLAUDE_CODE_AUTO_CONNECT_IDE=true; claude --continue || claude" Enter
+  tmux new-window -d -t "$name" -n shell -c "$dir"
+fi
+if [ -n "${TMUX:-}" ]; then exec tmux switch-client -t "$name"; else exec tmux attach-session -t "$name"; fi

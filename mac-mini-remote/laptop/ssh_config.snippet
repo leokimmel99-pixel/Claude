@@ -1,0 +1,11 @@
+# Append to ~/.ssh/config on the LAPTOP. "mac-mini" resolves via Tailscale MagicDNS.
+Host mac-mini
+  HostName mac-mini
+  User YOUR_MAC_USERNAME
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  ServerAliveInterval 15
+  ServerAliveCountMax 4
+  TCPKeepAlive yes
+  ConnectTimeout 10
+  ForwardAgent no

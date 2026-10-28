@@ -1,0 +1,3 @@
+# Claude Code per-host working state
+.claude/session/
+.claude/settings.local.json

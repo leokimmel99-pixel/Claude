@@ -1,0 +1,32 @@
+{
+  "terminal.integrated.defaultProfile.osx": "claude-tmux",
+  "terminal.integrated.profiles.osx": {
+    "claude-tmux": {
+      "path": "/bin/zsh",
+      "args": ["-lc", "exec ~/.local/bin/cc"]
+    },
+    "zsh": { "path": "/bin/zsh", "args": ["-l"] }
+  },
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.venv/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.next/**": true,
+    "**/target/**": true,
+    "**/.claude/session/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true, "**/.venv": true, "**/dist": true,
+    "**/build": true, "**/.next": true, "**/target": true
+  },
+  "search.followSymlinks": false,
+  "typescript.tsserver.maxTsServerMemory": 3072,
+  "git.autorefresh": true,
+  "git.autofetch": false
+}
